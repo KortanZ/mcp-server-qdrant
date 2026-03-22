@@ -46,6 +46,10 @@ class EmbeddingProviderSettings(BaseSettings):
         default="sentence-transformers/all-MiniLM-L6-v2",
         validation_alias="EMBEDDING_MODEL",
     )
+    local_dir: str = Field(
+        default=None,
+        validation_alias="EMBEDDING_DIR",
+    )
 
 
 class FilterableField(BaseModel):

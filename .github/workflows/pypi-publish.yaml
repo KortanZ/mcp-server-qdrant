@@ -15,8 +15,8 @@ on:
     tags:
       - 'v*'           # Push events to every version tag
 
-env:
-  UV_PUBLISH_TOKEN: '${{ secrets.PYPI_API_TOKEN }}'
+# env:
+#   UV_PUBLISH_TOKEN: '${{ secrets.PYPI_API_TOKEN }}'
 
 jobs:
   build:
@@ -39,5 +39,5 @@ jobs:
     - name: Build package
       run: uv build
 
-    - name: Publish package
-      run: uv publish
+    # - name: Publish package
+    #   run: uv publish
